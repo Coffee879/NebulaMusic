@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nébula Music - Inicio</title>
+    <link rel="stylesheet" href="../static/styles/styles.css">
+
+</head>
+<body>
+<nav>
+    <a class="logo">
+        <img src="../static/imgs/nebula-03.svg" alt="Logo Nébula Music">
+    </a>
+    <button class="menu-button" aria-label="Abrir menú"><img src="../static/imgs/menu.png" alt="menu icon" class="menu-icon"></button>
+    <ul>
+        <li>
+            <a href="index.html">Inicio</a>
+        </li>
+        <li>
+            <a href="about.html">Acerca de Nosotros</a>
+        </li>
+        <li>
+            <a href="iniciar-sesion.html">Iniciar sesión</a>
+        </li>
+        <li>
+            <a href="registro.html">Registro</a>
+        </li>
+    </ul>
+</nav>
+<header class="principal">
+    <img src="../static/imgs/cover.jpg" alt="Cover Nébula, a series of albums on outer space">
+    <h1>Tu música en la nube y en tu espacio.</h1>
+</header>
+
+<main>
+    <h2>¡Entérate de todo!</h2>
+    <h3>Novedades de la semana</h3>
+    <section class="news">
+
+        <details>
+            <summary>
+                <h4>Taylor lanza canción para Toy Story</h4>
+            </summary>
+
+            <p>taylor lanza cancion</p>
+        </details>
+
+        <details>
+            <summary><h4>Shakira manda a una imitadora al mundial</h4></summary>
+<p>shakira manda una imitaodra al mundial</p>
+        </details>
+
+        <details>
+            <summary><h4>Harry Styles se resbala en su segundo concierto en la CDMX</h4>
+            </summary>
+<p>se resbalo por accidente</p>
+        </details>
+    </section>
+
+    <button id="abrir" class="btn">Saluda</button>
+
+    <dialog id="modal">
+        <p>Hola desde mi modal! :)</p>
+        <button id="cerrar" class="btn">cerrar</button>
+    </dialog>
+
+    <footer>
+        <p>Copyright Nébula 2026.</p>
+    </footer>
+</main>
+
+</body>
+
+<script>
+    const dialog = document.getElementById("modal");
+    const abrir = document.getElementById("abrir");
+    const cerrar = document.getElementById("cerrar");
+
+    abrir.addEventListener('click', ()=>{
+        dialog.showModal();
+    });
+
+    cerrar.addEventListener('click', ()=>{
+        dialog.close();
+    });
+
+    // Menú hamburguesa (celular)
+    const menuButton = document.querySelector(".menu-button");
+    const menu = document.querySelector("nav ul");
+
+    menuButton.addEventListener('click', ()=>{
+        menu.classList.toggle("open");
+    });
+</script>
+</html>

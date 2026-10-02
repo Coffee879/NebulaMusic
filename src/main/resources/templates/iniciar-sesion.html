@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Nébula - Iniciar sesión</title>
+    <link href="../static/styles/styles.css" rel="stylesheet">
+</head>
+<body>
+<header class="principal">
+    <img src="../static/imgs/cover.jpg" alt="Cover Nébula, a series of albums on outer space">
+    <h1>Tu música en la nube y en tu espacio.</h1>
+
+</header>
+<main>
+    <h2>Inicia Sesión</h2>
+    <form method="post" action="/autenticacion" enctype="application/x-www-form-urlencoded">
+        <div>
+            <label for="usermail">Correo electrónico</label>
+            <input name="email" id="usermail" type="email"
+                   required placeholder="correo@mail.com">
+            <span>Ingresa tu correo electrónico</span>
+        </div>
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" required id="password" name="password" placeholder="*****">
+            <span>¿No recuerdas tu contraseña? <a>Recupérala</a> </span>
+        </div>
+        <div class="options">
+            <button type="submit">Iniciar Sesión</button>
+            <button type="reset">Cancelar</button>
+        </div>
+    </form>
+</main>
+</body>
+</html>

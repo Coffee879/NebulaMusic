@@ -1,0 +1,354 @@
+@import url("globals.css");
+
+
+*{
+    font-family: "Quicksand",sans-serif;
+    font-size: 16px;
+    color: #fafafa;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: var(--bg-color-black);
+}
+
+body{
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Alan Sans", sans-serif;
+    color: var(--highlight);
+}
+
+h2::first-letter{
+    font-size: 4rem;
+    color: #eea6dc;
+    font-family: "Quicksand", sans-serif;
+}
+
+h2::after{
+    content: url("../imgs/nota-musical.png");
+}
+
+h3{
+    margin: 1rem 0;
+}
+
+h4{
+    display: inline;
+    color: var(--highlight);
+}
+
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgba(19, 18, 0, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo{
+    width: 4rem;
+}
+
+.logo img{
+    display: block;
+    width: 100%;
+}
+
+nav .menu-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-icon{
+    width: 1.5rem;
+}
+
+nav ul{
+    display: none;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0;
+    align-items: center;
+    flex-direction: column;
+}
+
+nav ul.open{
+    display: flex;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+
+header{
+    position: relative;
+    width: 100%;
+    height: 40vh;
+}
+
+header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.55);
+}
+
+header h1{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "Alan Sans", sans-serif;
+}
+
+header h1 span{
+    color: var(--highlight);
+}
+
+
+main{
+    width: clamp(280px, 90%, 1500px);
+    margin: auto;
+    padding-bottom: 1rem;
+}
+
+.news{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.news details{
+    background-color: var(--card-bg);
+    border: 1px solid var(--input-bg);
+    border-radius: var(--border-radius-cards);
+    padding: 1rem 1.25rem;
+}
+
+.news summary{
+    cursor: pointer;
+}
+
+.news p{
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #cbd5e0;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 650px;
+    margin: 2rem auto 0;
+    gap: 0.8rem;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--input-bg);
+    border-radius: var(--border-radius-cards);
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+form label{
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #cbd5e0;
+}
+
+form span{
+    font-size: 0.75rem;
+    color: #cbd5e0;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="password"]{
+    flex-grow: 2;
+    border-radius: 1rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-left: 3px solid var(--nav-links);
+    background-color: var(--input-bg);
+    color: var(--text-color-dark);
+    color-scheme: dark;
+}
+
+form input::placeholder{
+    color: #8c8a70;
+    font-style: italic;
+}
+
+form input:not([type="submit"]):focus{
+    border-color: var(--highlight);
+    border-width: 0.2rem;
+    border-style: solid;
+    outline: none;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    accent-color: var(--nav-links);
+}
+
+#suscriptions-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1rem;
+}
+
+.terms{
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+
+.btn,
+.options button{
+    background-color: var(--nav-links);
+    padding: 0.6rem 0.8rem;
+    border: 2px solid var(--nav-links);
+    border-radius: var(--border-radius-buttons);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover,
+.options button:hover{
+    color: var(--bg-color-black);
+    background-color: var(--links-color-dark);
+}
+
+.options button:disabled{
+    background-color: #a7a7a7;
+    border-color: #a7a7a7;
+    color: #4e4a4a;
+    cursor: not-allowed;
+}
+
+.options{
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.options button[type="reset"]{
+    background-color: transparent;
+}
+
+.options button[type="reset"]:hover{
+    color: var(--text-color-dark);
+    background-color: rgba(141, 63, 209, 0.3);
+}
+
+
+dialog{
+    margin: auto;
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--input-bg);
+    border-radius: var(--border-radius-cards);
+    text-align: center;
+}
+
+dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+dialog .btn{
+    margin-top: 1rem;
+}
+
+footer{
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    border-top: 2px solid var(--input-bg);
+    text-align: center;
+}
+
+
+@media (min-width: 800px) {
+    header h1{
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 3rem;
+    }
+
+    nav .menu-button{
+        display: none;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        padding: 0;
+        gap: 2rem;
+    }
+
+    .news{
+        display: grid;
+        column-gap: 2.5rem;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    form{
+        width: 70%;
+    }
+
+    .options{
+        flex-direction: row;
+    }
+
+    .options button{
+        flex: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    nav .logo{
+        width: 4.5rem;
+    }
+
+    h2{
+        font-size: 3.5rem;
+    }
+
+    .news{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

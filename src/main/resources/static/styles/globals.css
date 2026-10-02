@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Quicksand:wght@300..700&display=swap');
+
+:root{
+    --bg-color-black: #131200;
+    --card-bg: #1c1a05;
+    --input-bg: #2a280a;
+    --text-color-dark: #EDF2F4;
+    --links-color-dark: #EFBDEB;
+    --links-color-hover: #8D91C7;
+    --nav-links: #8D3FD1;
+    --nav-links-lighter: #9558c2;
+    --highlight: #EDF67D;
+    --border-radius-buttons: 0.5rem;
+    --border-radius-cards: 1rem;
+}
+
+a{
+    color: var(--links-color-dark);
+    text-decoration: none;
+    transition: all 40ms;
+}
+
+a:hover{
+    color: var(--links-color-hover);
+    transition: all 40ms;
+    cursor: pointer;
+}

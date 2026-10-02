@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nébula - Regístrate</title>
+    <link href="../static/styles/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="principal">
+    <img src="../static/imgs/cover.jpg" alt="Cover Nébula, a series of albums on outer space">
+    <h1>Tu música en la nube y en tu espacio.</h1>
+
+</header>
+<main>
+    <h2>Regístrate</h2>
+    <form action="/crear-cuenta" method="post" enctype="application/x-www-form-urlencoded">
+        <div>
+            <label for="txt_name">
+                Nombre:
+            </label>
+            <input
+                    id="txt_name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Escriba su nombre completo">
+        </div>
+        <div>
+            <label for="txt_email">E-Mail</label>
+
+            <input
+                    id="txt_email"
+                    type="email"
+                    required
+                    placeholder="correo@mail.com"
+                    name="email"
+            >
+        </div>
+        <div>
+            <label for="txt_dob" >Fecha de nacimiento:</label>
+            <input
+                    type="date"
+                    required
+                    name="dob"
+                    id="txt_dob"
+            >
+        </div>
+        <div>
+            <label for="txt_nickname">Nombre de usuario</label>
+            <input type="text"
+                   required
+                   id="txt_nickname"
+                   name="nickname"
+            >
+        </div>
+        <div>
+            <label for="txt_password">Contraseña</label>
+            <input type="password"
+                   required
+                   id="txt_password"
+                   name="password"
+            >
+        </div>
+        <label for="suscriptions-container">Elige tu suscripción</label>
+        <div id="suscriptions-container">
+            <input type="radio"
+                   value="basic"
+                   id="radio-basic"
+                   name="suscription">
+            <label for="radio-basic">Básico</label>
+            <input type="radio"
+                   value="premium"
+                   id="radio-premium"
+                   name="suscription">
+            <label for="radio-premium">Premium</label>
+            <input type="radio"
+                   value="family"
+                   id="radio-family"
+                   name="suscription">
+            <label for="radio-family">Familiar</label>
+        </div>
+
+        <div class="terms">
+            <label for="chk_terms">Acepto los términos y condiciones.</label>
+            <input name="tyc" id="chk_terms" type="checkbox">
+        </div>
+
+        <div class="options">
+            <button type="submit">Registrar</button>
+            <button type="reset">Cancelar</button>
+        </div>
+
+    </form>
+</main>
+
+</body>
+</html>
